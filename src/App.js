@@ -1,4 +1,4 @@
-import Databinding from "./Components/Databinding/Databinding";
+import Databinding from "./Databinding/Databinding";
 import DemoClass from "./Components/DemoClass";
 import DemoFunction from "./Components/DemoFunction";
 import Home from "./Components/Home/Home";
