@@ -1,0 +1,10 @@
+.content{
+    background: url('../../assets/img/background/avenger.jpg');
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.content-cover{
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+}
