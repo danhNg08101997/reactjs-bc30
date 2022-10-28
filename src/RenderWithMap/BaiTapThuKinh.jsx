@@ -6,7 +6,7 @@ const dataGlasses = [
     id: 1,
     price: 30,
     name: "GUCCI G8850U",
-    url: "./glassesImage/v1.png",
+    url: "./img/glassesImage/v1.png",
     desc: "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
   },
   {
@@ -78,12 +78,18 @@ export default class BaiTapThuKinh extends Component {
           </div>
           <div className="container">
             <div className="row">
-              <div className="col-4">
-                <img src={dataGlasses.url} alt="..." />
+              <div className="col-4 mt-2">
+                <img src="./img/glassesImage/model.jpg" alt="..." />
               </div>
               <div className="col-4"></div>
-              <div className="col-4">2</div>
-              <div className="col-12">kinh</div>
+              <div className="col-4 mt-2">
+                <img src="./img/glassesImage/model.jpg" alt="..." />
+              </div>
+              <div className="col-12 mt-5">
+                <div className="border">
+                  adc
+                </div>
+              </div>
             </div>
           </div>
         </div>
