@@ -8,6 +8,7 @@ import StyleRender from "./StyleRender/StyleRender";
 import BaiTapState from "./State/BaiTapState";
 import RenderWithMap from "./RenderWithMap/RenderWithMap";
 import BaiTapRenderWithMap from "./RenderWithMap/BaiTapRenderWithMap";
+import BaiTapThuKinh from "./RenderWithMap/BaiTapThuKinh";
 
 //component
 function App() {
@@ -23,7 +24,8 @@ function App() {
       {/* <StyleRender /> */}
       {/* <BaiTapState /> */}
       {/* <RenderWithMap/> */}
-      <BaiTapRenderWithMap />
+      {/* <BaiTapRenderWithMap /> */}
+      {/* <BaiTapThuKinh /> */}
     </div>
   );
 }
