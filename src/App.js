@@ -9,6 +9,11 @@ import BaiTapState from "./State/BaiTapState";
 import RenderWithMap from "./RenderWithMap/RenderWithMap";
 import BaiTapRenderWithMap from "./RenderWithMap/BaiTapRenderWithMap";
 import BaiTapThuKinh from "./RenderWithMap/BaiTapThuKinh";
+import DemoProps from "./Props/DemoProps/DemoProps";
+import ProductList from "./Props/BaiTapProps/ProductList";
+import BaiTapXemChiTiet from "./Props/BaiTapXemChiTiet/BaiTapXemChiTiet";
+import BaiTapXemChiTiet2 from "./Props/BaiTapXemChiTiet/BaiTapXemChiTiet2";
+import ExerciseCarStore from "./Props/ExerciseCarStore/ExerciseCarStore";
 
 //component
 function App() {
@@ -26,6 +31,11 @@ function App() {
       {/* <RenderWithMap/> */}
       {/* <BaiTapRenderWithMap /> */}
       {/* <BaiTapThuKinh /> */}
+      {/* <DemoProps /> */}
+      {/* <ProductList/> */}
+      {/* <BaiTapXemChiTiet /> */}
+      {/* <BaiTapXemChiTiet2 /> */}
+      <ExerciseCarStore />
     </div>
   );
 }
