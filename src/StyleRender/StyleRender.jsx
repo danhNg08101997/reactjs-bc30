@@ -17,7 +17,6 @@ export default class StyleRender extends Component {
 
         {/* Cách 3: dùng khi giá trị style bị thay đổi bởi event từ người dùng */}
         <h3 style={{ color: "green", backgroundColor: "black" }}>Let's go</h3>
-
       </div>
     );
   }
