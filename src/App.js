@@ -25,7 +25,7 @@ function App() {
       {/* <BaiTapState /> */}
       {/* <RenderWithMap/> */}
       {/* <BaiTapRenderWithMap /> */}
-      {/* <BaiTapThuKinh /> */}
+      <BaiTapThuKinh />
     </div>
   );
 }
