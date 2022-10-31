@@ -87,9 +87,27 @@ export default class FormProduct extends Component {
     this.props.createProduct(productInfo);
   };
 
+  // static getDerivedStateFromProps(newProps, currentState) {
+  //   //lấy props.productEdit => gán vào state.productInfo => sau đó giao diện lấy ra từ state
+  //   if (newProps.productEdit.id !== currentState.productInfo.id) {
+  //     //bấm nút edit
+  //     currentState.productInfo = newProps.productEdit;
+  //     return currentState; //hàm này sẽ tọa ra this.state mới
+  //   }
+  //   return null;
+  // }
+
+  //chạy trước render sau khi props thay đổi
+  componentWillReceiveProps(newProps) {
+    //khi bấm nút chỉnh sửa lấy props gán vào state => giao diện render ra từ state
+    this.setState({
+      productInfo: newProps.productEdit,
+    });
+  }
+
   render() {
     let { id, name, productType, img, description, price } =
-      this.props.productEdit;
+      this.state.productInfo;
     return (
       <form className="card" onSubmit={this.handleSubmit}>
         <div className="card-header bg-dark text-warning fw-bold">
@@ -176,7 +194,15 @@ export default class FormProduct extends Component {
         </div>
         <div className="card-footer">
           <button className="btn btn-success mx-2">Create</button>
-          <button className="btn btn-primary mx-2">Update</button>
+          <button
+            className="btn btn-primary mx-2"
+            type="button"
+            onClick={() => {
+              this.props.updateProduct(this.state.productInfo);
+            }}
+          >
+            Update
+          </button>
         </div>
       </form>
     );

@@ -16,6 +16,7 @@ import Login from "./pages/Login/Login";
 import Page404 from "./pages/Page404/Page404";
 import ProductManagement from "./pages/ProductManagement/ProductManagement";
 import Register from "./pages/Register/Register";
+import ReactLifeCycle from "./ReactLifeCycle/ReactLifeCycle";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -30,6 +31,7 @@ root.render(
         <Route path="login" element={<Login />}></Route>
         <Route path="register" element={<Register />}></Route>
         <Route path="reactform" element={<ProductManagement />}></Route>
+        <Route path="lifecycle" element={<ReactLifeCycle />}></Route>
         {/* <Route path="*" element={<Page404 />}></Route> */}
         <Route path="*" element={<Navigate to="" />}></Route>
       </Route>

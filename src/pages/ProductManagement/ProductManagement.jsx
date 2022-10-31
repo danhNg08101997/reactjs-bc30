@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import FormProduct from "./FormProduct";
 import TableProduct from "./TableProduct";
+import axios from "axios";
 
 export default class ProductManagement extends Component {
   state = {
@@ -63,6 +64,21 @@ export default class ProductManagement extends Component {
     this.setState({ productEdit: prodEdit });
   };
 
+  updateProduct = (productUpdate) => {
+    // console.log(productUpdate);
+    //lấy ra dữ liệu trong mảng (prodUpdate)
+    let prodUpdate = this.state.arrProduct.find(
+      (prod) => prod.id == productUpdate.id
+    );
+    if (prodUpdate) {
+      for (let key in prodUpdate) {
+        prodUpdate[key] = productUpdate[key];
+      }
+    }
+    // sau khi thay đổi thì set lại state
+    this.setState({ arrProduct: this.state.arrProduct });
+  };
+
   render() {
     return (
       <div className="container">
@@ -70,6 +86,7 @@ export default class ProductManagement extends Component {
         <FormProduct
           createProduct={this.createProduct}
           productEdit={this.state.productEdit}
+          updateProduct={this.updateProduct}
         />
         <TableProduct
           arrProduct={this.state.arrProduct}
@@ -78,5 +95,18 @@ export default class ProductManagement extends Component {
         />
       </div>
     );
+  }
+  componentDidMount() {
+    let promise = axios({
+      url: "https://svcy.myclass.vn/api/product/getall",
+      method: "GET",
+    });
+    promise.then((result) => {
+      // thành công
+      this.setState({ arrProduct: result.data });
+    });
+    promise.catch((err) => {
+      console.log(err);
+    });
   }
 }

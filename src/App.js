@@ -4,7 +4,7 @@ import { NavLink, Outlet } from "react-router-dom";
 function App() {
   return (
     <div>
-      <nav className="navbar navbar-expand-sm navbar-dark bg-primary">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-secondary">
         <div className="container">
           <NavLink className="navbar-brand" to="/">
             React Class Component
@@ -98,8 +98,20 @@ function App() {
                   }
                   to="/reactform"
                 >
-                  
                   ReactForm
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "bg-success text-white nav-link" : "nav-link"
+                  }
+                  style={({ isActive }) =>
+                    isActive ? { borderRadius: "5px" } : {}
+                  }
+                  to="/lifecycle"
+                >
+                  ReactLifeCycle
                 </NavLink>
               </li>
               {/* <li className="nav-item dropdown">
@@ -124,7 +136,7 @@ function App() {
         </div>
       </nav>
       <Outlet />
-      <footer className="bg-primary text-white display-5 fw-regular text-center">
+      <footer className="bg-secondary text-white display-5 fw-regular text-center">
         Footer
       </footer>
     </div>
