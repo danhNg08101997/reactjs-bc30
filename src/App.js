@@ -114,13 +114,35 @@ function App() {
                   ReactLifeCycle
                 </NavLink>
               </li>
-              {/* <li className="nav-item dropdown">
-        <a className="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-        <div className="dropdown-menu" aria-labelledby="dropdownId">
-          <a className="dropdown-item" href="#">Action 1</a>
-          <a className="dropdown-item" href="#">Action 2</a>
-        </div>
-      </li> */}
+              <li className="nav-item dropdown">
+                <NavLink
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  id="dropdownId"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Redux
+                </NavLink>
+                <div className="dropdown-menu" aria-labelledby="dropdownId">
+                  <NavLink className="dropdown-item" to="demotanggiamsoluong">
+                    DemoTangGiamSoLuong
+                  </NavLink>
+                  <NavLink className="dropdown-item" to="demochangecolor">
+                    DemoChangeColor
+                  </NavLink>
+                  <NavLink className="dropdown-item" to="demoqlsv">
+                    DemoQLSV
+                  </NavLink>
+                  <NavLink className="dropdown-item" to="demogiohang">
+                    DemoGioHang
+                  </NavLink>
+                  <NavLink className="dropdown-item" to="demoburger">
+                    DemoBurger
+                  </NavLink>
+                </div>
+              </li>
             </ul>
             <form className="d-flex my-2 my-lg-0">
               <input

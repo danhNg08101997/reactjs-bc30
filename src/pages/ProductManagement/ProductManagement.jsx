@@ -23,7 +23,7 @@ export default class ProductManagement extends Component {
         productType: "tablet",
       },
     ],
-    productEdit: {
+    productEdit: { 
       id: "",
       name: "",
       price: "",
@@ -32,6 +32,7 @@ export default class ProductManagement extends Component {
       description: "",
     },
   };
+
   //CRUD
   // Muốn thay đổi state nào thì viết hàm setState tại vị trí state đó
 
